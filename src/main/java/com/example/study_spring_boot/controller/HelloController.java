@@ -1,4 +1,4 @@
-package com.example.study_spring_boot.helloController;
+package com.example.study_spring_boot.controller;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -14,11 +14,5 @@ public class HelloController {
     @GetMapping("/variable/{variable}")
     public String getVariable1(@PathVariable String variable){
         return variable;
-    }
-
-    //@GetMapping과 @PathVariable에 지정된 변수명이 동일하지 않은 경우
-    @GetMapping("/variable2/{variable2}")
-    public String variable2(@PathVariable("variable2") String var){
-        return var;
     }
 }
